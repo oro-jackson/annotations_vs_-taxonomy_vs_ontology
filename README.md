@@ -42,42 +42,4 @@ annotation_vs_taxonomy_ontology.ipynb
 5. **Ontology is most valuable as an LLM grounding layer.**
    Ontology-grounded LLM expansion plus dense retrieval gives the strongest overall ranking quality.
 
-## Quickstart
 
-```bash
-git clone https://github.com/<your-org>/<your-repo>.git
-cd <your-repo>
-
-python -m venv .venv
-source .venv/bin/activate
-
-pip install -r requirements.txt
-jupyter lab annotation_vs_taxonomy_ontology.ipynb
-```
-
-## Suggested repo structure
-
-```text
-.
-├── annotation_vs_taxonomy_ontology.ipynb
-├── README.md
-├── requirements.txt
-├── src/
-├── checkpoints/
-├── figures/
-└── assets/
-```
-
-## Recommended architecture
-
-```text
-User query
-   │
-   ├── Dense semantic retriever
-   ├── Annotation / taxonomy / ontology layer
-   ├── Ontology-grounded LLM query expansion
-   └── Fusion / final ranking
-          │
-          ▼
-   Grounded, explainable retrieval results
-```
